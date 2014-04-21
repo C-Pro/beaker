@@ -2,6 +2,8 @@
 beaker
 ======
 
+[![Build Status](https://travis-ci.org/C-Pro/beaker.svg?branch=master)](https://travis-ci.org/C-Pro/beaker)
+
 Beaker is a library for caching and sessions for use with web applications and
 stand-alone Python scripts and applications. It comes with WSGI middleware for
 easy drop-in use with WSGI based web applications, and caching decorators for
