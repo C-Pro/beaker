@@ -118,7 +118,7 @@ class MemcachedNamespaceManager(NamespaceManager):
         if not isinstance(key, str):
             key = key.decode('ascii')
         formated_key = (self.namespace + '_' + key).replace(' ', '\302\267')
-        if len(formated_key) > MAX_KEY_LENGTH:
+        if len(formated_key.encode('utf-8')) > MAX_KEY_LENGTH:
             if py3k:
                 formated_key = formated_key.encode('utf-8')
             formated_key = sha1(formated_key).hexdigest()
