@@ -122,7 +122,6 @@ class MemcachedNamespaceManager(NamespaceManager):
             if py3k:
                 formated_key = formated_key.encode('utf-8')
             formated_key = sha1(formated_key).hexdigest()
-        print('memc key = {} \nlen = {}'.format(str(formated_key),str(len(formated_key))))
         return formated_key
 
     def __getitem__(self, key):

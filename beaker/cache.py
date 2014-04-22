@@ -568,9 +568,6 @@ def _cache_decorate(deco_args, manager, kwargs, region):
                 if util.py3k:
                     cache_key = cache_key.encode('utf-8')
                 cache_key = sha1(cache_key).hexdigest()
-            print("!!!!!!AAAARRRRGGGGGGGGGGGGHHHHHHHHHHHHHH!!!!!!!!")
-            print("cache_key={} : len={}".format(str(cache_key),str(len(cache_key))))
-
             def go():
                 return func(*args)
 
